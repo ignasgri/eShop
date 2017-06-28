@@ -41,11 +41,11 @@ INSTALLED_APPS = [
     'accounts',
     'django_forms_bootstrap',
     'products',
-    # 'payments',
+    'payments',
     'django_gravatar',
-    # 'cart',
+    'cart',
     # 'storages',
-    # 'rest_framework',
+    'rest_framework',
     # 'categories'
 ]
 
@@ -72,6 +72,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -127,6 +128,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE_KEY')
+STRIPE_SECRET = os.getenv('STRIPE_SECRET_KEY')
 
 STATICFILES_DIRS = (
    os.path.join(BASE_DIR, "static"),
