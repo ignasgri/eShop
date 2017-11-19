@@ -1,0 +1,28 @@
+button{
+    border: none;
+    background: none;
+}
+a{
+    color: green;
+}
+#banner{
+    margin-top: 28px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+}
+h1{
+    text-align: center;
+}
+table.table.table-striped > tbody > tr{
+    background: none;
+}
+.pull-right {
+    float: right;
+    margin-top: 70px;
+    position: absolute;
+    margin-left: 400px;
+}
+.prof{
+    margin-left: 50px;
+    margin-top: 50px;
+}

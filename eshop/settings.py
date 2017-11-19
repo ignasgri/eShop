@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'cart',
     # 'storages',
     'rest_framework',
-    # 'categories'
+    'categories'
 ]
 
 MIDDLEWARE = [
@@ -109,7 +109,10 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'accounts.backends.EmailAuth'
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
@@ -139,3 +142,12 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+# Email Settings
+DEFAULT_FROM_EMAIL = 'noemail@yahoo.com'
+
+# The following settings are for dev/debug.
+# Not suitable for production.
+
+# To use Django's Console email backend
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

@@ -33,11 +33,12 @@
                 <td>{{ item.product.price }}</td>
                 <td>{{ item.quantity }}</td>
                 <td>
-                    <form method="post" action="#">
+                    <form method="post" action="{% url 'adjust_cart' item.id %}">
                         {% csrf_token %}
                         Quantity
                         <input name='quantity' type="number" min="0" max="999">
-                        <button type="submit">Adjust</button>
+                        <button i class="fa fa-refresh" aria-hidden="true" type="submit" ></i></button>
+                        <!--<button type="submit">Adjust</button>-->
                     </form>
 
                 </td>

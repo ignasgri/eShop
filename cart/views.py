@@ -15,7 +15,7 @@ from rest_framework import viewsets
 from .serializers import CartItemSerializer
 
 
-# stripe.api_key = settings.STRIPE_SECRET
+stripe.api_key = settings.STRIPE_SECRET
 
 
 
