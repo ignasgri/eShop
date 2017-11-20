@@ -1,0 +1,1 @@
+C:\Users\ignas\virtualenvs\ecomm_env\Scripts\activate
